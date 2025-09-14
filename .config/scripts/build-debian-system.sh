@@ -1,14 +1,19 @@
 #!/bin/bash
 
-#wm
+#lightdm / maybe sddm
 #sxhkd
 #bspc
 #feh
 #polybar
+#fzf
+#
 
 #kitty
 #rofi
 #
+# synergy
+#
+sudo apt install fonts-noto-color-emoji
 
 ## syncthing
 sudo mkdir -p /etc/apt/keyrings
@@ -23,6 +28,31 @@ wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signa
 cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
 wget -O signal-desktop.sources https://updates.signal.org/static/desktop/apt/signal-desktop.sources;
 cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sources > /dev/null
+sudo apt update
+sudo apt install signal-desktop
+
+
+## VM Stuff
+sudo apt install -y \
+    qemu-kvm \   			#hypervisor
+    libvirt-daemon-system \ #management-daemon
+    libvirt-clients \		#cli
+    bridge-utils \			
+    virt-manager \			#gui
+    ovmf					#uefi support for VMs
+
+sudo usermod -aG libvirt,kvm $USER
+
+# 1) libvirt running?
+sudo systemctl enable --now libvirtd virtlogd
+
+sudo virsh net-start default
+sudo virsh net-autostart default
+
+
+sudo virsh net-list --all
+virsh list --all
+echo ">> Virtualization stack installed. Log out and back in to use libvirt without sudo."
 
 
 
@@ -34,3 +64,8 @@ cat signal-desktop.sources | sudo tee /etc/apt/sources.list.d/signal-desktop.sou
 #udiskie
 #nm-applet
 #
+#
+#
+#
+#vimwiki
+#bash configs
