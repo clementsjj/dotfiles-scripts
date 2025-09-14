@@ -1,0 +1,57 @@
+#!/bin/sh
+
+GREEN="#00ff00"
+
+#pgrep -x sxhkd > /dev/null || sxhkd &
+
+pkill -x sxhkd
+sxhkd &
+
+bspc monitor -d I II III IV
+bspc config border_width         1
+bspc config focused_border_color $GREEN
+
+bspc config window_gap          12
+
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Gimp desktop='^4' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+
+# Add a kitty scratchpad
+# bspc rule -a kitty:scratchpad state=floating sticky=on hidden=on
+
+
+# LEMONBAR
+#$HOME/.config/lemonbar/example.sh &
+#nohup "$HOME/.config/lemonbar/example.sh" >/dev/null 2>&1 &
+
+# POLYBAR
+killall -q polybar
+while pgrep -x polybar >/dev/null; do sleep 1; done
+polybar bar1 &
+
+feh --bg-fill "$HOME/.config/wallpapers/dark-plant.jpg" &
+
+# Flameshot screenshot tool (tray icon)
+(flameshot >/dev/null 2>&1 &)
+(blueman-applet >/dev/null 2>&1 &)
+(copyq >/dev/null 2>&1 &)
+# PulseAudio / PipeWire tray
+# (pasystray >/dev/null 2>&1 &) # does not work
+
+# (udiskie -t >/dev/null 2>&1 &)
+(sleep 2; nm-applet --indicator >/dev/null 2>&1 &)
+
+# syncthing
+(syncthing --no-browser --logfile /tmp/syncthing.log &)
+
+# syncthing tray
+
+# audio-out
+# (pasystray >/dev/null 2>&1 &)
