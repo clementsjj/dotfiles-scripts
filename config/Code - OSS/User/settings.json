@@ -1,0 +1,10 @@
+
+{
+  "pasteImage.path": "${currentFileDir}",
+  "pasteImage.basePath": "${currentFileDir}",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.namePrefix": "${currentFileNameWithoutExt}-",
+  "pasteImage.insertPattern": "![${imageFileNameWithoutExt}](./${imageFileName})",
+  "pasteImage.showFilePathConfirmInputBox": false
+}
+

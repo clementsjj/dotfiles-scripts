@@ -1,0 +1,7 @@
+[keyboard]
+bindings = [
+  # Clipboard
+  { key = "V", mods = "Super", action = "Paste" },
+  { key = "C", mods = "Super", action = "Copy" },
+  { key = "V", mods = "Control", action = "Paste" },
+]

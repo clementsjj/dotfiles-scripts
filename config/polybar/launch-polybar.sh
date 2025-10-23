@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
+set -e
+killall -q polybar || true
+while pgrep -x polybar >/dev/null; do sleep 0.1; done
 
-# Terminate already running bar instances
-# If all your bars have ipc enabled, you can use 
-polybar-msg cmd quit
-# Otherwise you can use the nuclear option:
-# killall -q polybar
+# One bar per active output
+# polybar -m | cut -d: -f1 | while read -r m; do
+#   MONITOR="$m" polybar -r bar1 &
+# done
 
-# Launch bar1 and bar2
-echo "---" | tee -a ~/.config/polybar/polybar1.log 
-polybar bar1 2>&1 | tee -a ~/.config/polybar/polybar1.log & disown
-#polybar bar2 2>&1 | tee -a /tmp/polybar2.log & disown
+MONITOR=DisplayPort-0 polybar -r longbar &   # big monitor (acer)
+MONITOR=DisplayPort-1 polybar -r bar2 &   # top monitor (hp)
+MONITOR=DisplayPort-2 polybar -r bar1 &   # left monitor (viewsonic)
 
-echo "Bars launched..."
+# Get monitors with polybar -m

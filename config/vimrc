@@ -1,0 +1,43 @@
+set number
+set tabstop=4
+set mouse=a  "Use mouse to highlight
+set clipboard=unnamedplus "Remaps default copy paste to system clipboard
+set cursorline
+
+filetype plugin on
+"syntax enable
+syntax on
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+highlight ColorColumn                                       ctermbg=16
+highlight Delimiter                       ctermfg=DarkGray
+highlight htmlH1             cterm=bold   ctermfg=Blue
+highlight htmlH2             cterm=bold   ctermfg=LightBlue
+highlight htmlH3             cterm=bold   ctermfg=LightBlue
+highlight htmlH4             cterm=bold   ctermfg=LightBlue
+highlight markdownCode       cterm=none   ctermfg=DarkCyan
+highlight markdownCodeBlock  cterm=none   ctermfg=DarkCyan
+
+""""""""
+" VIMWIKI
+""""""""
+set nocompatible
+
+let g:vimwiki_list = [{ 'syntax': 'markdown', 
+                  \ 'ext': 'md',
+                  \ 'path': '~/vimwiki/'}]
+
+"autocmd FileType vimwiki highlight Normal ctermbg=235 guibg=#0a0a1a
+autocmd FileType vimwiki highlight Normal ctermbg=233 guibg=#050510
+autocmd FileType vimwiki highlight LineNr ctermfg=205 guifg=#ff69b4
+autocmd FileType vimwiki highlight CursorLineNr ctermfg=213 guifg=#ff77ff
+
+
+"""""""""
+" key mapping
+"""""""""
+inoremap jk <Esc>
+
+vnoremap <leader>c :s/^/#/<CR>
+vnoremap <leader>u :s/^#//<CR>
+

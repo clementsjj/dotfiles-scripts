@@ -4,7 +4,7 @@
 HOST="192.168.1.4"
 DB_NAME="grafana"
 USER="postgres"
-PASSWORD="bucky"
+PASSWORD="yobozoboy"
 
 # Fetch CPU usage using vmstat
 CPU_USAGE=$(top -bn1 | grep "Cpu(s)" | awk '{print 100 - $8}')

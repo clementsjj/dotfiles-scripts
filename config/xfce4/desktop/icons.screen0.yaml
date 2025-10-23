@@ -4,16 +4,6 @@
 configs:
 - level: 1
   monitors:
-  - id: "40b0416c75d337ba83ccddd6a8aa9706f61e836f"
-    display_name: "Hewlett Packard HP 22er 3CM741000D    (DisplayPort-1)"
-    geometry:
-      x: 3840
-      y: 0
-      width: 1920
-      height: 1080
-  icons: {}
-- level: 1
-  monitors:
   - id: "548c31d67db5be4c8966355af5e18c3231458d35"
     display_name: "ViewSonic Corporation VX1755 WQW234622861 (DisplayPort-2)"
     geometry:
@@ -22,31 +12,80 @@ configs:
       width: 1920
       height: 1080
   icons:
-    "/home/juuj":
+    "519ac650-bb7e-4087-9754-ca024091a5a5":
       row: 0
-      col: 0
-    "/":
-      row: 1
-      col: 0
+      col: 2
+      last_seen: 1758161729463154
     "trash:///":
+      row: 8
+      col: 1
+    "/home/juuj/Desktop/steam.desktop":
+      row: 9
+      col: 4
+    "/run/media/juuj/I - Storage":
       row: 2
+      col: 0
+      last_seen: 1757956072451313
+    "34B9-679B":
+      row: 8
+      col: 4
+      last_seen: 1760556049953437
+    "68FD-5637":
+      row: 9
+      col: 2
+      last_seen: 1760556049962981
+    "/":
+      row: 9
+      col: 0
+    "7CFF-7ECF":
+      row: 8
+      col: 2
+      last_seen: 1760556049960524
+    "220A46D60A46A71F":
+      row: 9
+      col: 3
+      last_seen: 1760556049965610
+    "62288c1d-a70a-4745-96af-8ff79f484289":
+      row: 0
+      col: 3
+      last_seen: 1758161729470023
+    "0cda2ea0-8c05-4805-88fb-d91adec5bac3":
+      row: 5
+      col: 0
+      last_seen: 1757965172491179
+    "2025-09-06-12-06-13-00":
+      row: 2
+      col: 0
+      last_seen: 1760130027871166
+    "0E0B-C898":
+      row: 9
+      col: 1
+      last_seen: 1760556049948305
+    "/home/juuj":
+      row: 8
       col: 0
     "2025-09-01-16-37-02-00":
       row: 3
       col: 0
       last_seen: 1757965172484915
-    "220A46D60A46A71F":
-      row: 4
+    "0e5d970a-11ba-4a19-ad3e-719bb7ff79c6":
+      row: 8
+      col: 3
+      last_seen: 1760556049956115
+- level: 1
+  monitors:
+  - id: "40b0416c75d337ba83ccddd6a8aa9706f61e836f"
+    display_name: "Hewlett Packard HP 22er 3CM741000D    (DisplayPort-1)"
+    geometry:
+      x: 3840
+      y: 0
+      width: 1920
+      height: 1080
+  icons:
+    "79FB-7E16":
+      row: 0
       col: 0
-      last_seen: 1757965172487793
-    "/run/media/juuj/I - Storage":
-      row: 2
-      col: 0
-      last_seen: 1757956072451313
-    "0cda2ea0-8c05-4805-88fb-d91adec5bac3":
-      row: 5
-      col: 0
-      last_seen: 1757965172491179
+      last_seen: 1760139066582034
 - level: 0
   monitors:
   - id: "dc6e51ca8d987c236e7bbe5ab0bef3c26bc0a7f6"
@@ -57,9 +96,59 @@ configs:
       width: 3840
       height: 2160
   icons:
+    "2025-09-06-12-06-13-00":
+      row: 3
+      col: 0
+      last_seen: 1758029290999994
+    "trash:///":
+      row: 2
+      col: 0
+    "62288c1d-a70a-4745-96af-8ff79f484289":
+      row: 6
+      col: 0
+      last_seen: 1758029291009404
+    "79FB-7E16":
+      row: 0
+      col: 0
+      last_seen: 1760132630884819
+    "0E0B-C898":
+      row: 0
+      col: 0
+      last_seen: 1760448870032158
+    "7CFF-7ECF":
+      row: 1
+      col: 0
+      last_seen: 1760448870038824
+    "0e5d970a-11ba-4a19-ad3e-719bb7ff79c6":
+      row: 3
+      col: 0
+      last_seen: 1760448870056693
+    "2025-09-28-21-13-16-00":
+      row: 0
+      col: 0
+      last_seen: 1760131452758356
     "/home/juuj":
       row: 0
       col: 0
+    "34B9-679B":
+      row: 7
+      col: 0
+      last_seen: 1758029291013094
     "/":
       row: 1
       col: 0
+    "519ac650-bb7e-4087-9754-ca024091a5a5":
+      row: 5
+      col: 0
+      last_seen: 1758029291005772
+    "/home/juuj/Desktop/steam.desktop":
+      row: 8
+      col: 0
+    "220A46D60A46A71F":
+      row: 4
+      col: 0
+      last_seen: 1758029291002546
+    "68FD-5637":
+      row: 2
+      col: 0
+      last_seen: 1760448870046937
