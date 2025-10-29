@@ -1,0 +1,22 @@
+---
+polybar|notice:  Parsing config file: /home/juuj/.config/polybar/config.ini
+polybar|notice:  Listening for IPC messages (PID: 2144)
+polybar|warn:  No monitor specified, using "eDP-1"
+polybar|notice:  Loading module 'xworkspaces' of type 'internal/xworkspaces'
+polybar|notice:  Loading module 'pulseaudio' of type 'internal/pulseaudio'
+polybar|notice:  pulseaudio: using default sink alsa_output.pci-0000_00_1f.3.analog-stereo
+polybar|notice:  Loading module 'memory' of type 'internal/memory'
+polybar|notice:  Loading module 'cpu' of type 'internal/cpu'
+polybar|notice:  Loading module 'wlan' of type 'internal/network'
+polybar|notice:  module/wlan: Discovered wireless interface wlp3s0
+polybar|notice:  Loading module 'eth' of type 'internal/network'
+polybar|notice:  module/eth: Discovered wired interface enp0s31f6
+polybar|notice:  Loading module 'bat0' of type 'internal/battery'
+polybar|notice:  Loading module 'bat1' of type 'internal/battery'
+polybar|notice:  Loading module 'date' of type 'internal/date'
+polybar|notice:  Loaded 9 modules
+polybar|notice:  Loaded font "monospace" (name=Noto Sans Mono, offset=2, file=/usr/share/fonts/truetype/noto/NotoSansMono-Regular.ttf)
+polybar|error: background_manager: Failed to copy slice of root pixmap (XCB_MATCH (8))
+polybar|error: Fatal Error in eventloop: XCB_MATCH (8)
+polybar|notice:  Termination signal received, shutting down...
+polybar|error: ./src/components/eventloop.cpp:187: libuv error for 'uv_loop_close(m_loop.get())': resource busy or locked
